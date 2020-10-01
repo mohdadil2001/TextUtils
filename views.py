@@ -2,15 +2,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def ex1(request):
-    s='''<h2>Navigation Bar</h2>
-    <a href='https://www.youtube.com/watch?v=lcpqpxVowU0&list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9&index=12' >Django with harry bhaii</a>
-    <a href='https://www.youtube.com'>You Tube</a><br>
-    <a href='https://www.facebook.com'>facebook</a><br>
-    <a href='https://www.google.com'>google</a><br>
-    <a href='https://www.flipkart.com'>flipkart</a><br>'''
-    return HttpResponse(s)
-
 def index(request):
     # analys the text 
     return render(request,'index.html' )
@@ -30,7 +21,7 @@ def analyze(request):
     # analyzed=djtext
     
     if removepunc=='on':
-        punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+        punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~!&*^&&*(%$#'''
         analyzed=''
         for char in djtext:
             if char not in punctuations:
